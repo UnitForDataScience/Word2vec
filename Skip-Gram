@@ -1,0 +1,53 @@
+# This progrma is to apply word2Vec on Oroville news Article about funding related taxonomy _ Inprogress
+
+import gensim
+
+# Loading google's training model
+model = gensim.models.Word2Vec.load_word2vec_format('..\Word2Vec\GoogleNews-vectors-negative300.bin', binary=True)
+
+# Reading the raw data
+import pandas as pd
+news_raw = pd.read.csv("", \delimiter = "\t", quoting = 3)
+
+# cleaning the text
+
+# Removing punctuation and numbers
+import re
+no_punctuation = re.sub ("[^a-zA-Z]", " ", news_raw]
+print no_punctuation
+
+# Tokenization
+lowercase = no_puntuation.lower()
+words = lowercase.split()
+
+# Removing stop words
+import NLTK
+nltk.download()
+
+# importing the stop word list
+from nltk.corpus import stopwords
+print stopwords.words("english")
+
+# Remove stop words
+stops_w = set(stopwords.words("english")) 
+words = [for w in words:
+            if w not in stopWords.words("english")]
+
+return (" ".join(words))
+
+# porter stemming
+gensim.porterstemmer 
+
+
+
+# skipgram
+from gensim.models import Word2Vec
+min_count = 2
+size = 50
+window = 4
+model = Word2Vec(Funding provided, min_count=1, size=1000, window=2, sg=1)
+
+# numpy 
+import numpy as np
+
+
